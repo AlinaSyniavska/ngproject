@@ -10,7 +10,6 @@ import {IUser} from "../../models/IUser";
 export class UsersComponent implements OnInit {
 
     users: IUser[];
-    // singleUser: IUser;
 
     constructor(private userService: UserService) {
     }
@@ -19,10 +18,5 @@ export class UsersComponent implements OnInit {
         this.userService
             .getUsers()
             .subscribe(response => this.users = response);
-
-/*        this.userService
-            .getUser(5)
-            .subscribe(response => this.singleUser = response);*/
     }
-
 }
