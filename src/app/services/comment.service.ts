@@ -1,18 +1,19 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
-import {IComment} from "../models/IComment";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+
+import {IComment} from "../interfaces";
+import {urls} from "../constants";
 
 @Injectable({
     providedIn: 'root'
 })
 export class CommentService {
-    private url = 'https://jsonplaceholder.typicode.com/comments';
 
-    constructor(private http: HttpClient) {
+    constructor(private httpClient: HttpClient) {
     }
 
-    getComments(): Observable<IComment[]> {
-        return this.http.get<any[]>(this.url);
+    getAll(): Observable<IComment[]> {
+        return this.httpClient.get<IComment[]>(urls.comments);
     }
 }
