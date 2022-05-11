@@ -1,0 +1,9 @@
+.commentContainer {
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+}

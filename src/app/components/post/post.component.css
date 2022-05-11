@@ -1,0 +1,18 @@
+.postItem{
+    width: 600px;
+    height: 120px;
+    padding: 5px;
+    border: 2px solid teal;
+    border-radius: 5px;
+    background: rgba(0, 128, 128, 0.3);
+
+    transition: .5s;
+    transform: rotateX(0grad);
+    overflow: hidden;
+}
+
+.postItem:hover{
+    cursor: pointer;
+    transition: .5s;
+    transform: rotateX(20grad);
+}
