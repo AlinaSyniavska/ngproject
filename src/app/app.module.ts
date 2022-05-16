@@ -10,10 +10,6 @@ import { HomeComponent } from './components/home/home.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { PostsComponent } from './components/posts/posts.component';
 import { PostComponent } from './components/post/post.component';
-import { PostDetailsComponent } from './components/post-details/post-details.component';
-import { CommentsComponent } from './components/comments/comments.component';
-import { CommentComponent } from './components/comment/comment.component';
-import {CommentDetailsComponent} from "./components/comment-details/comment-details.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,10 +19,6 @@ import {CommentDetailsComponent} from "./components/comment-details/comment-deta
     UserDetailsComponent,
     PostsComponent,
     PostComponent,
-    PostDetailsComponent,
-    CommentsComponent,
-    CommentComponent,
-    CommentDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,20 +34,6 @@ import {CommentDetailsComponent} from "./components/comment-details/comment-deta
           {path: 'userDetails/:id', component: UserDetailsComponent}
         ]
       },
-      {
-        path: 'postsPage',
-        component: PostsComponent,
-        children: [
-          {path: 'postDetails/:id', component: PostDetailsComponent}
-        ]
-      },
-      {
-        path: 'commentsPage',
-        component: CommentsComponent,
-        children: [
-          {path: 'commentDetails/:id', component: CommentDetailsComponent}
-        ]
-      }
     ])
 
   ],
