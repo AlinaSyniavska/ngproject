@@ -1,4 +1,6 @@
-<div>
-  <p>{{singleUser?.name}}</p>
-  <p>{{singleUser?.email}}</p>
+<div *ngIf="singleUser">
+  <p>{{singleUser.name}}</p>
+  <p>{{singleUser.email}}</p>
+  <p>{{singleUser.phone}}</p>
+  <p>{{singleUser.website}}</p>
 </div>

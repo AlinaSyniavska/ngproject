@@ -1,4 +1,9 @@
-<app-comment *ngFor="let commentItem of comments" [comment]="commentItem"></app-comment>
-<hr/>
-<router-outlet></router-outlet>
+<div class="container">
+  <div class="commentItem">
+    <app-comment *ngFor="let commentItem of comments" [comment]="commentItem"></app-comment>
+  </div>
+  <div class="commentItem">
+    <router-outlet></router-outlet>
+  </div>
+</div>
 

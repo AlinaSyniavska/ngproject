@@ -1,4 +1,4 @@
-<div>
-  {{comment.id}}. {{comment.name}}
-  <a [routerLink]="['commentDetails', comment.id]">Details</a>
+<div *ngIf="comment" class="commentContainer">
+  <div>{{comment.id}}. {{comment.name}}</div>
+  <button (click)="getDetails()">getDetails</button>
 </div>

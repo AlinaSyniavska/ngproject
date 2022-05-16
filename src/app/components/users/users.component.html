@@ -1,3 +1,6 @@
-<app-user *ngFor="let userItem of users" [user]="userItem"></app-user>
-<hr/>
-<router-outlet></router-outlet>
+<div class="container">
+  <div>
+    <app-user *ngFor="let userItem of users" [user]="userItem"></app-user>
+  </div>
+  <router-outlet></router-outlet>
+</div>

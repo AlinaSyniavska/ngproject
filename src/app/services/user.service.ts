@@ -18,6 +18,6 @@ export class UserService {
   }
 
   getById(id: string): Observable<IUser> {
-    return  this.httpClient.get<IUser>(urls.users + '/' + id);
+    return  this.httpClient.get<IUser>(`${urls.users}/${id}`);
   }
 }
