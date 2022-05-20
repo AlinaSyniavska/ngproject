@@ -12,8 +12,8 @@ export class CourseComponent implements OnInit {
   @Input()
   course: IExchangeRate;
 
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
