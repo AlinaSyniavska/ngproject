@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {PostsComponent} from "./components/posts/posts.component";
 import {PostDetailsComponent} from "./components/post-details/post-details.component";
+import {PostResolver} from "./services/post.resolver";
 
 const routes: Routes = [
   {
     path: '', component: PostsComponent, children: [
-      {path: ':id', component: PostDetailsComponent}
+      {path: ':id', component: PostDetailsComponent, resolve: {postData: PostResolver}}
     ]
   }
 ];

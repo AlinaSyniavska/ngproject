@@ -3,11 +3,12 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {TodoDetailsComponent} from "./components/todo-details/todo-details.component";
 import {TodosComponent} from "./components/todos/todos.component";
+import {TodoResolver} from "./services/todo.resolver";
 
 const routes: Routes = [
   {
     path: '', component: TodosComponent, children: [
-      {path: ':id', component: TodoDetailsComponent}
+      {path: ':id', component: TodoDetailsComponent, resolve: {todoData: TodoResolver}}
     ]
   }
 ];

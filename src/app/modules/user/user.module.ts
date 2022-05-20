@@ -7,6 +7,7 @@ import {UserService} from "./services";
 import {UserDetailsComponent} from './components/user-details/user-details.component';
 import {UsersComponent} from './components/users/users.component';
 import {UserComponent} from './components/user/user.component';
+import {UserResolver} from "./services/user.resolver";
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {UserComponent} from './components/user/user.component';
   ],
   providers: [
     UserService,
+    UserResolver,
   ]
 })
 export class UserModule { }
