@@ -1,0 +1,6 @@
+<input type="date" [(ngModel)]="date"/>
+<button (click)="getDate()">Get</button>
+
+<div *ngIf="exchangeRates">
+  {{exchangeRates | json}}
+</div>
