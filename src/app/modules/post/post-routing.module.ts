@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {PostsComponent} from "./components/posts/posts.component";
 import {PostDetailsComponent} from "./components/post-details/post-details.component";
-import {PostGuard, PostResolver} from "./services";
+import {PostGuard} from "./guards";
+import {PostResolver} from "./services";
+
 
 const routes: Routes = [
   {

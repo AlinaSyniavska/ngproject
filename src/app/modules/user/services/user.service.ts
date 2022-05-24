@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {catchError, map, Observable, throwError} from "rxjs";
+import {catchError, delay, map, Observable, throwError} from "rxjs";
 
 
 import {IUser} from "../interfaces";
@@ -19,7 +19,7 @@ export class UserService {
   }
 
   getById(id: string): Observable<IUser> {
-    return this.httpClient.get<IUser>(`${urls.users}/${id}`)
+    return this.httpClient.get<IUser>(`${urls.users}/${id}`).pipe(delay(2000))
       .pipe(
         map(value => value),
         catchError((err => throwError('Error in getById')))

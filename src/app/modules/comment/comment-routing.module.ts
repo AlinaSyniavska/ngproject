@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {CommentsComponent} from "./components/comments/comments.component";
 import {CommentDetailsComponent} from "./components/comment-details/comment-details.component";
-import {CommentGuard, CommentResolver} from "./services";
+import {CommentGuard} from "./guards";
+import {CommentResolver} from "./services";
+
 
 const routes: Routes = [
   {

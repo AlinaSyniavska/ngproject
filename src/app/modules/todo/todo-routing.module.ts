@@ -3,7 +3,8 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {TodoDetailsComponent} from "./components/todo-details/todo-details.component";
 import {TodosComponent} from "./components/todos/todos.component";
-import {TodoActivatorGuard, TodoDeactivatorGuard, TodoResolver} from "./services";
+import {TodoActivatorGuard, TodoDeactivatorGuard} from "./guards";
+import {TodoResolver} from "./services";
 
 const routes: Routes = [
   {
