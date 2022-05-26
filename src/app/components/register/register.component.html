@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div><label>Enter login:
+    <input type="text" formControlName="username">
+    <span *ngIf="userNameError"><b>{{userNameError}}</b></span>
+  </label></div>
+  <div><label>Enter password:
+    <input type="text" formControlName="password">
+  </label></div>
+  <div><label>Enter again password:
+    <input type="text" formControlName="confirmPassword">
+    <span *ngIf="form.errors">{{form.errors['notSame']}} <b>Passwords not equal</b></span>
+  </label></div>
+
+  <button [disabled]="form.invalid" (click)="register()">Register</button>
+</form>
