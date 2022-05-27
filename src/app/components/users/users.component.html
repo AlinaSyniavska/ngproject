@@ -1,0 +1,5 @@
+<app-user
+  *ngFor="let userItem of users"
+  [user]="userItem"
+  (userEmitter)="catchUserEmit($event)"
+></app-user>
