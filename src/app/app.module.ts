@@ -11,6 +11,8 @@ import { CommentComponent } from './components/comment/comment.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodosComponent } from './components/todos/todos.component';
+import {CustomPipe} from "./services";
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { TodosComponent } from './components/todos/todos.component';
     CommentComponent,
     CommentsComponent,
     TodoComponent,
-    TodosComponent
+    TodosComponent,
+    CustomPipe
   ],
   imports: [
     BrowserModule,
