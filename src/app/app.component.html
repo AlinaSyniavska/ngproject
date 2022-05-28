@@ -1,8 +1,16 @@
-<h1>{{user?.name}} {{user?.phone}}</h1>
+<!--<h1>{{user?.name}} {{user?.phone}}</h1>
 
 <app-users (userEmitToApp)="catchUserEmitToApp($event)"></app-users>
 <hr/>
 
-<h1 *ngIf="post">{{post.id}} -- {{post.userId}}</h1>
+<h1 *ngIf="post">{{post.id}} &#45;&#45; {{post.userId}}</h1>
 <app-posts (postEmitterToApp)="catchPostEmitToApp($event)"></app-posts>
-<hr/>
+<hr/>-->
+
+<h1>{{'behaviorSubject' | uppercase}}</h1>
+
+<!--<h2 *ngIf="comment">{{comment.name}} &#45;&#45; {{comment.email}}</h2>
+<app-comments></app-comments>-->
+
+<h2 *ngIf="todo">{{todo.id}} -- {{todo.completed}}</h2>
+<app-todos></app-todos>

@@ -1,0 +1,1 @@
+<app-post *ngFor="let postItem of posts" [post]="postItem" (postEmitter)="catchPostEmitter($event)"></app-post>
