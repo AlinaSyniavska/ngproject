@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {IUser} from "./interfaces";
+import {IPost, IUser} from "./interfaces";
 
 @Component({
   selector: 'app-root',
@@ -10,8 +10,13 @@ import {IUser} from "./interfaces";
 export class AppComponent {
   title = 'ngproject';
   user: IUser;
+  post: IPost;
 
   catchUserEmitToApp($event: IUser) {
     this.user = $event;
+  }
+
+  catchPostEmitToApp($event: IPost) {
+    this.post = $event;
   }
 }
